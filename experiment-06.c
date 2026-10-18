@@ -2,27 +2,23 @@
 
 int main()
 {
-    int n;
-
+    int i, j, k, n, m;
     scanf("%d", &n);
 
-    for (int i = 0; i < n; i++)
+    for (i = 0; i < n; i++)
     {
-        for (int j = 0; j < n - i - 1; j++)
+        for (k = 1; k <= 2 * (n - 1 - i); k++)
         {
-            printf("    ");
+            printf(" ");
         }
 
-        int value = 1;
-
-        for (int j = 0; j <= i; j++)
+        m = 1;
+        for (j = 0; j <= i; j++)
         {
-            printf("%4d", value);
-            value = value * (i - j) / (j + 1);
+            printf("%4d", m);
+            m = m * (i - j) / (j + 1);
         }
-
         printf("\n");
     }
-
     return 0;
 }
